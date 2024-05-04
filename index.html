@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EventListener()</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .box {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .box:hover {
+    transform: translateY(-5px);
+  }
+
+  .box h2 {
+    background-color: #10201f;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 2px solid #eaeaea;
+  }
+
+  .box p {
+    background-color: #f15c00;
+    color: #fff;
+    font-size: 20px;
+    padding: 40px;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .box p:hover {
+    background-color: #e45b0b;
+  }
+</style>
+</head>
+<body>
+
+<div class="box" id="myDiv1">
+  <h2>Box 1</h2>
+  <p id="myP1">Klik Disini!</p>
+</div>
+
+<div class="box" id="myDiv2">
+  <h2>Box 2</h2>
+  <p id="myP2">Klik Disini!</p>
+</div>
+
+<script>
+document.getElementById("myP1").addEventListener("click", function() {
+  alert("Anda mengklik warna orange pada box 1!");
+}, false);
+
+document.getElementById("myDiv1").addEventListener("click", function() {
+  alert("Anda mengklik warna hitam pada box 1!");
+}, false);
+
+document.getElementById("myP2").addEventListener("click", function() {
+  alert("Anda mengklik warna orange pada box 2!");
+}, false);
+
+document.getElementById("myDiv2").addEventListener("click", function() {
+  alert("Anda mengklik warna hitam pada box 2!");
+}, false);
+</script>
+
+</body>
+</html>
+
+
